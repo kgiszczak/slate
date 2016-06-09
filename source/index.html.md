@@ -60,12 +60,14 @@ $('#editor').retype(function() {
 
   html = html.replace(/<\/?span[^>]*>/ig, '');
 
-  html = html.replace(new RegExp('f' + c + '?o' + c + '?o', 'ig'),
-    '<span class="tag tag1">$&</span>');
-  html = html.replace(new RegExp('b' + c + '?a' + c + '?r', 'ig'),
-    '<span class="tag tag2">$&</span>');
-  html = html.replace(new RegExp('b' + c + '?a' + c + '?z', 'ig'),
-    '<span class="tag tag3">$&</span>');
+  var foo = new RegExp('f' + c + '?o' + c + '?o', 'ig');
+  html = html.replace(foo, '<span class="tag tag1">$&</span>');
+
+  var bar = new RegExp('b' + c + '?a' + c + '?r', 'ig');
+  html = html.replace(bar, '<span class="tag tag2">$&</span>');
+
+  var baz = new RegExp('b' + c + '?a' + c + '?z', 'ig');
+  html = html.replace(baz, '<span class="tag tag3">$&</span>');
 
   $(this).html(html);
 });
@@ -84,9 +86,14 @@ If you want to have full control over what is replaced you can initialize this p
 
     html = html.replace(/<\/?span[^>]*>/ig, '');
 
-    html = html.replace(new RegExp('f' + c + '?o' + c + '?o', 'ig'), '<span class="tag tag1">$&</span>');
-    html = html.replace(new RegExp('b' + c + '?a' + c + '?r', 'ig'), '<span class="tag tag2">$&</span>');
-    html = html.replace(new RegExp('b' + c + '?a' + c + '?z', 'ig'), '<span class="tag tag3">$&</span>');
+    var foo = new RegExp('f' + c + '?o' + c + '?o', 'ig');
+    html = html.replace(foo, '<span class="tag tag1">$&</span>');
+
+    var bar = new RegExp('b' + c + '?a' + c + '?r', 'ig');
+    html = html.replace(bar, '<span class="tag tag2">$&</span>');
+
+    var baz = new RegExp('b' + c + '?a' + c + '?z', 'ig');
+    html = html.replace(baz, '<span class="tag tag3">$&</span>');
 
     $(this).html(html);
   });
