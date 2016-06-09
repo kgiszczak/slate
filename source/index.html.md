@@ -16,7 +16,7 @@ search: true
 
 Library to save and restore cursor position on contenteditable elements. You can use it to create functionality like Twitter's hashtags. It works by inserting special character in place of cursor, manipulating the text and then replacing this special character with cursor.
 
-You can find source code [here](https://github.com/kgiszczak/retype).
+You can find source code at [https://github.com/kgiszczak/retype](https://github.com/kgiszczak/retype).
 
 # Installation
 
